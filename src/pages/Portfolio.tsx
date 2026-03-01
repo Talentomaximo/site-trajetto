@@ -10,7 +10,7 @@ const teamPortfolios: Record<string, { name: string, role: string, img: string, 
     bio: "Especialista em alavancar vendas através de tráfego pago estratégico. Com mais de 5 anos de experiência, já gerenciou múltiplos dígitos em anúncios, focando sempre no ROI e na escalabilidade do negócio.",
     projects: [
       { title: "Campanha de Lançamento E-commerce", desc: "Aumento de 300% nas vendas no primeiro mês através de Facebook e Google Ads." },
-      { title: "Geração de Leads B2B", desc: "Redução do Custo por Lead em 45% para empresa de software." }
+        
     ]
   },
   "lucas-muniz": {
@@ -20,7 +20,7 @@ const teamPortfolios: Record<string, { name: string, role: string, img: string, 
     bio: "Apaixonado por criar soluções que resolvem problemas reais. Focado em metodologias ágeis e design thinking para desenvolver produtos digitais que encantam os usuários.",
     projects: [
       { title: "App de Gestão Financeira", desc: "Liderou o desenvolvimento do produto do zero até 10k usuários ativos." },
-      { title: "Plataforma Educacional", desc: "Reestruturação completa da jornada do usuário, aumentando a retenção em 60%." }
+      
     ]
   },
   "mario-jose": {
@@ -30,7 +30,7 @@ const teamPortfolios: Record<string, { name: string, role: string, img: string, 
     bio: "Criativo e estratégico, transforma marcas comuns em comunidades engajadas. Especialista em criar narrativas visuais e textuais que conectam marcas ao seu público-alvo.",
     projects: [
       { title: "Rebranding de Marca de Moda", desc: "Crescimento orgânico de 50k seguidores no Instagram em 6 meses." },
-      { title: "Estratégia de Conteúdo Viral", desc: "Campanha no TikTok que alcançou mais de 2 milhões de visualizações." }
+      
     ]
   },
   "christian-teixeira": {
@@ -40,7 +40,7 @@ const teamPortfolios: Record<string, { name: string, role: string, img: string, 
     bio: "Desenvolvedor Full-Stack e UI/UX Designer. Une código limpo e design intuitivo para criar experiências web modernas, rápidas e acessíveis.",
     projects: [
       { title: "Dashboard Analítico", desc: "Criação de interface complexa de dados usando React e Tailwind CSS." },
-      { title: "E-commerce de Alta Performance", desc: "Desenvolvimento de loja virtual com tempo de carregamento inferior a 1 segundo." }
+      
     ]
   }
 };
@@ -124,7 +124,7 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="text-white text-lg font-bold mb-4">Projetos em Destaque</h2>
+            <h2 className="text-white text-lg font-bold mb-4">Projeto em Destaque</h2>
             <div className="flex flex-col gap-4">
               {member.projects.map((proj, idx) => (
                 <div key={idx} className="bg-[#2a2f38]/50 border border-white/5 p-4 rounded-xl">
