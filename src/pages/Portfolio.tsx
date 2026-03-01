@@ -98,7 +98,7 @@ export default function PortfolioPage() {
             className="text-3xl md:text-4xl font-bold text-white mb-2"
           >
             {member.name}
-          </motion.h1>
+          </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,11 +124,11 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="text-white text-lg font-bold mb-4">Projetos em Destaque</h2>
+            <h3 className="text-white text-lg font-bold mb-4">Projetos em Destaque</h3>
             <div className="flex flex-col gap-4">
               {member.projects.map((proj, idx) => (
                 <div key={idx} className="bg-[#2a2f38]/50 border border-white/5 p-4 rounded-xl">
-                  <h3 className="text-white font-bold text-sm mb-1">{proj.title}</h3>
+                  <h4 className="text-white font-bold text-sm mb-1">{proj.title}</h4>
                   <p className="text-gray-400 text-xs leading-relaxed">{proj.desc}</p>
                 </div>
               ))}
