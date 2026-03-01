@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Instagram, Github, MessageCircle } from 'lucide-react';
 
 const teamPortfolios: Record<string, { name: string, role: string, img: string, bio: string, projects: { title: string, desc: string }[] }> = {
   "eduardo-teixeira": {
@@ -66,14 +66,29 @@ export default function PortfolioPage() {
       </Link>
 
       <div className="flex flex-col md:flex-row gap-8 items-start max-w-[800px]">
-        <motion.img 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-          src={member.img} 
-          alt={member.name} 
-          className="w-32 h-32 md:w-48 md:h-48 rounded-2xl object-cover border-2 border-[#5a4fcf] shadow-xl" 
-        />
+        <div className="flex flex-col items-center">
+          <motion.img 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+            src={member.img} 
+            alt={member.name} 
+            className="w-32 h-32 md:w-48 md:h-48 rounded-2xl object-cover border-2 border-[#5a4fcf] shadow-xl" 
+          />
+
+          {/* ÍCONES ADICIONADOS ABAIXO DA FOTO */}
+          <div className="flex gap-4 mt-4">
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-5 h-5 text-white" />
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <Github className="w-5 h-5 text-white" />
+            </a>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-5 h-5 text-white" />
+            </a>
+          </div>
+        </div>
         
         <div className="flex flex-col">
           <motion.h1 
